@@ -85,6 +85,10 @@ class Router
         return $this->language;
     }
 
+    /**
+     * Router constructor.
+     * @param $uri
+     */
     public function __construct($uri)
     {
         $this->uri = urldecode(trim($uri, '/'));//Очищаем строку от слешей(trim),urldecode - декодирует URL-кодированную строку
@@ -131,29 +135,25 @@ class Router
 //                echo "<pre>";
                 //Сдвинем массив на 1 єлемент
                 array_shift($path_parts);
- //               echo "array_shift";
+                //               echo "array_shift";
 //                print_r($path_parts);
 //                echo "<pre>";
-            }
-
-            elseif (in_array(strtolower(current($path_parts)), Config::get('languages'))) {
+            } elseif (in_array(strtolower(current($path_parts)), Config::get('languages'))) {
                 $this->language = strtolower(current($path_parts));
                 array_shift($path_parts);
             }
             //Get controller
-            if (current($path_parts)){
-                $this->controller =strtolower(current($path_parts));
+            if (current($path_parts)) {
+                $this->controller = strtolower(current($path_parts));
                 array_shift($path_parts);
             }
             //Get action
-            if (current($path_parts)){
-                $this->action =strtolower(current($path_parts));
+            if (current($path_parts)) {
+                $this->action = strtolower(current($path_parts));
                 array_shift($path_parts);
             }
             //Get params - all the rest
             $this->params = $path_parts;
-
-
 
 
         }

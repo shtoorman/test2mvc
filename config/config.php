@@ -9,7 +9,7 @@ Config::set('languages', array('ru', 'en'));
 //2 роута,дкфолт и админ
 Config::set('routes', array(
     'default' => '',
-    'admin' => 'admin',
+    'admin' => 'admin_',
 ));
 //если роут не зада явно будет использован дифолт
 Config::set('default_route', 'default');
@@ -18,5 +18,5 @@ Config::set('default_language', 'ru');
 //контроллер по умолчанию pages
 Config::set('default_controller', 'pages');
 
-Config::set('default-action', 'index');
+Config::set('default_action', 'index');
 
