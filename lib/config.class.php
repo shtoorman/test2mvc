@@ -9,7 +9,8 @@ class Config
 
 
     /**
-     * @return value
+     * @param $key
+     * @return mixed|null
      */
     public static function get($key)
     {

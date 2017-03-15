@@ -17,7 +17,7 @@ class Controller
     public function __construct($data = array())
     {
         $this->data = $data;;
-        $this->params = App::getRouter()->getParams();
+        $this->params = App::getRouter()->getParams();//параметры запроса из обьекта роутера
     }
 
     /**

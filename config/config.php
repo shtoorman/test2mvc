@@ -1,7 +1,7 @@
 <?php
 //Осовой конфигурационный файл приложения
 //Параметры азвания сайта или подключения к базе данных
-Config::set('$site_name', 'Your Site Name');
+Config::set('site_name', 'Your Site Name');
 //Определения списка языков
 Config::set('languages', array('ru', 'en'));
 

@@ -2,21 +2,45 @@
 
 //Диспечер запросов
 
+/**
+ * Class Router
+ */
 class Router
 {
 
+    /**
+     * @var string
+     */
     protected $uri;
 
+    /**
+     * @var string
+     */
     protected $controller;
 
+    /**
+     * @var string
+     */
     protected $action;
 
+    /**
+     * @var array
+     */
     protected $params;
 
+    /**
+     * @var string
+     */
     protected $route;
 
+    /**
+     * @var string
+     */
     protected $method_prefix;
 
+    /**
+     * @var string
+     */
     protected $language;
 
     /**
@@ -129,7 +153,7 @@ class Router
 //                print_r($hhh);
 //                echo "<pre>";
                 $this->method_prefix = isset($routes[$this->route]) ? $routes[$this->route] : '';
-                $ghj = $this->getMethodPrefix();
+//               $ghj = $this->getMethodPrefix();
 //                echo "methodprefix->";
 //                print_r($ghj);
 //                echo "<pre>";
