@@ -51,7 +51,7 @@ class App
         echo 'Layout Path ->';
         print_r($layout_path);
         echo '<br/>';
-        $layout_view_object = new View($content, $layout_path);
+        $layout_view_object = new View(compact('content'), $layout_path);
         echo 'Layout object ->';
         print_r($layout_view_object);
         echo '<br/>';

@@ -20,7 +20,7 @@ class View
 
 
 
-
+    //путь к шаблону без создания обьекташ
     protected static function getDefaultViewPath()
     {
         $router = App::getRouter();
@@ -63,9 +63,9 @@ class View
         $data = $this->data;
 
         ob_start();//буферизация вывода
-        if (!empty($this->path)) {
-            include($this->path);
-        }
+
+        include($this->path);
+
         $content = ob_get_clean();
 
         return $content;
