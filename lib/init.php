@@ -29,5 +29,10 @@ function __autoload($class_name)
 
 
 }
+//глобальная функция вызывает гет класса ленг и принемает одни и те же агрументы
+function __($key, $default_value = ''){
+    return Lang::get($key, $default_value);
 
+
+}
 
